@@ -13,5 +13,5 @@
  - Allow checking network state in project permissions list (**Project - Options - Uses Permissions - Access network state;**)
  
  ### Sample:
- 
+ ![WIFI Connection](https://github.com/sinuke/FGX.ActiveNetworkInfo/blob/master/scr01.png) ![MOBILE Connection](https://github.com/sinuke/FGX.ActiveNetworkInfo/blob/master/scr02.png)
  
