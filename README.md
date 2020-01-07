@@ -1,6 +1,3 @@
-### FGX.ActiveNetworkInfo
-Getting information about connecting for FGX Native library.
-
 ### FGX.ActiveNetworkInfo.Android:
 
  - **class function CheckPermission: Boolean;** - Check permission "android.permission.ACCESS_NETWORK_STATE"
@@ -16,3 +13,5 @@ Getting information about connecting for FGX Native library.
  - Allow checking network state in project permissions list (**Project - Options - Uses Permissions - Access network state;**)
  
  ### Sample:
+ 
+ 

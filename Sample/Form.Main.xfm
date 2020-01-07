@@ -1,0 +1,30 @@
+object FormMain: TFormMain
+  OnSafeAreaChanged = fgFormSafeAreaChanged
+  Size.Width = 360.000000000000000000
+  Size.Height = 590.000000000000000000
+  SavedSizeWidth = 360s
+  SavedSizeHeight = 590s
+  object fgMemo1: TfgMemo
+    Alignment.FlexGrow = 10.000000000000000000
+    PositionMode = Relative
+    RelativePosition.Left = 104.000000000000000000
+    RelativePosition.Top = 104.000000000000000000
+    Size.Width = 360.000000000000000000
+    Size.Height = 536.363647460937500000
+    SavedSizeWidth = 97s
+    SavedSizeHeight = 100s
+  end
+  object fgButton1: TfgButton
+    Text = 'Load info'
+    Alignment.FlexGrow = 1.000000000000000000
+    PositionMode = Relative
+    Position.Y = 536.363647460937500000
+    RelativePosition.Left = 144.000000000000000000
+    RelativePosition.Top = 440.000000000000000000
+    Size.Width = 360.000000000000000000
+    Size.Height = 53.636363983154300000
+    OnTap = fgButton1Tap
+    SavedSizeWidth = 120s
+    SavedSizeHeight = 40s
+  end
+end
