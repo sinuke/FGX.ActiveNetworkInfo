@@ -9,8 +9,8 @@
  
  ### Usage:
  
- - Add **FGX.ActiveNetworkInfo.Android.pas;** to FGX Native project (**Progect - Add to project;**)
- - Allow checking network state in project permissions list (**Project - Options - Uses Permissions - Access network state;**)
+ - Add **FGX.ActiveNetworkInfo.Android.pas** to FGX Native project (**Progect - Add to project**)
+ - Allow checking network state in project permissions list (**Project - Options - Uses Permissions - Access network state**)
  
  ### Sample:
  ![WIFI Connection](https://github.com/sinuke/FGX.ActiveNetworkInfo/blob/master/scr01.png)
