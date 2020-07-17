@@ -1,18 +1,4 @@
-﻿{ *********************************************************************
-  *
-  * Autor: Efimov A.A.
-  * E-mail: infocean@gmail.com
-  * GitHub: https://github.com/AndrewEfimov
-  * Description: Getting information about connecting.
-  * Requirements: You need permission "ACCESS_NETWORK_STATE" in the manifest.
-  * Platform: only Android (tested on API16+)
-  * IDE: Delphi 10.1 Berlin +
-  * Original: https://github.com/AndrewEfimov/Android-API-Examples/tree/master/ActiveNetworkInfo
-  *
-  * Converted for FGX Native: sinuke (https://twitter.com/sinuke)
-  ******************************************************************** }
-
-unit FGX.ActiveNetworkInfo.Android;
+﻿unit FGX.ActiveNetworkInfo.Android;
 
 interface
 
@@ -21,13 +7,13 @@ uses Android.Api.Network;
 type
   TActiveNetworkInfo = class
   private
-    class var FJConnectivityManager: TJConnectivityManager;
+    class var FJConnectivityManager: JConnectivityManager;
     class constructor Create;
   public
     /// <summary>Check permission "android.permission.ACCESS_NETWORK_STATE"</summary>
     class function CheckPermission: Boolean;
     /// <summary>Returns details about the currently active default data network.</summary>
-    class function GetInfo: TJNetworkInfo;
+    class function GetInfo: JNetworkInfo;
     /// <summary>Indicates whether network connectivity exists and it is possible to establish connections and pass data.</summary>
     class function IsConnected: Boolean;
     /// <summary>Return a human-readable name describe the type of the network, for example "WIFI" or "MOBILE".</summary>
@@ -39,8 +25,7 @@ type
   end;
 
 implementation
-
-uses Java.Bridge.Helpers,
+uses Java.Bridge,
      System.SysUtils,
      Androidapi.JNI,
      Android.Api.JavaTypes,
@@ -82,9 +67,9 @@ begin
       (TfgAndroidHelper.Context.getSystemService(TJContext.CONNECTIVITY_SERVICE));
 end;
 
-class function TActiveNetworkInfo.GetInfo: TJNetworkInfo;
+class function TActiveNetworkInfo.GetInfo: JNetworkInfo;
 var
-  NetworkInfo: TJNetworkInfo;
+  NetworkInfo: JNetworkInfo;
 begin
   Result := nil;
   Create;
@@ -98,7 +83,7 @@ end;
 
 class function TActiveNetworkInfo.IsConnected: Boolean;
 var
-  NetworkInfo: TJNetworkInfo;
+  NetworkInfo: JNetworkInfo;
 begin
   NetworkInfo := GetInfo;
   Result := (NetworkInfo <> nil) and NetworkInfo.IsConnected();
@@ -106,7 +91,7 @@ end;
 
 class function TActiveNetworkInfo.IsMobile: Boolean;
 var
-  NetworkInfo: TJNetworkInfo;
+  NetworkInfo: JNetworkInfo;
 begin
   NetworkInfo := GetInfo;
   Result := (NetworkInfo <> nil) and (NetworkInfo.getType() = TJConnectivityManager.TYPE_MOBILE);
@@ -114,7 +99,7 @@ end;
 
 class function TActiveNetworkInfo.IsWifi: Boolean;
 var
-  NetworkInfo: TJNetworkInfo;
+  NetworkInfo: JNetworkInfo;
 begin
   NetworkInfo := GetInfo;
   Result := (NetworkInfo <> nil) and (NetworkInfo.getType() = TJConnectivityManager.TYPE_WIFI);
@@ -124,7 +109,7 @@ class function TActiveNetworkInfo.GetTypeName: string;
 const
   RESULT_NONE = 'NONE';
 var
-  NetworkInfo: TJNetworkInfo;
+  NetworkInfo: JNetworkInfo;
 begin
   NetworkInfo := GetInfo;
   if NetworkInfo <> nil then

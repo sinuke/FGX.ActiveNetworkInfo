@@ -12,6 +12,9 @@
  - Add **FGX.ActiveNetworkInfo.Android.pas** to FGX Native project (**Progect - Add to project**)
  - Allow checking network state in project permissions list (**Project - Options - Uses Permissions - Access network state**)
  
+ ### Warning:
+ **Only for FGX Native 1.4.0 and above**
+ 
  ### Sample:
  ![WIFI Connection](https://github.com/sinuke/FGX.ActiveNetworkInfo/blob/master/scr01.png)
  ![MOBILE Connection](https://github.com/sinuke/FGX.ActiveNetworkInfo/blob/master/scr02.png)
