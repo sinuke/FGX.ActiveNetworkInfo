@@ -35,7 +35,6 @@ begin
   fgMemo1.Lines.Clear;
   fgMemo1.Lines.Add('CheckPermission: ' + BoolToStr(TActiveNetworkInfo.CheckPermission, True));
   fgMemo1.Lines.Add('IsConnected: ' + BoolToStr(TActiveNetworkInfo.IsConnected, True));
-  fgMemo1.Lines.Add('GetTypeName: ' + TActiveNetworkInfo.GetTypeName);
   fgMemo1.Lines.Add('IsWifi: ' + BoolToStr(TActiveNetworkInfo.IsWifi, True));
   fgMemo1.Lines.Add('IsMobile: ' + BoolToStr(TActiveNetworkInfo.IsMobile, True));
 end;

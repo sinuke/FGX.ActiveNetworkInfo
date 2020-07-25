@@ -5,6 +5,7 @@ object FormMain: TFormMain
   SavedSizeWidth = 360s
   SavedSizeHeight = 590s
   object fgMemo1: TfgMemo
+    SpellCheckingType = No
     Alignment.FlexGrow = 10.000000000000000000
     PositionMode = Relative
     RelativePosition.Left = 104.000000000000000000
